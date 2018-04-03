@@ -18,9 +18,12 @@ class DM_TIPO_DESP(object):
     @classmethod
     def add(cls, tipo_despesa):
         succ, id, formatted = cls.format(tipo_despesa)
+        if not succ:
+            return None
         key = tipo_despesa.replace(' ', '_').lower()
-        if succ and key not in cls.values:
-            cls.values[key] = formatted
+        if key in cls.values:
+            return cls.values[key][0]
+        cls.values[key] = formatted
         return id
 
     @classmethod

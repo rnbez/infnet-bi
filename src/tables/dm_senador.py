@@ -18,13 +18,17 @@ class DM_SENADOR(object):
     @classmethod
     def add(cls, senador):
         succ, id, formatted = cls.format(senador)
+        if not succ:
+            return None
         key = senador.replace(' ', '_').lower()
-        if succ and key not in cls.values:
-            cls.values[key] = formatted
+        if key in cls.values:
+            return cls.values[key][0]
+        cls.values[key] = formatted
         return id
 
     @classmethod
     def dump(cls):
+        pass
         for row in cls.values.values():
             print(row)
 

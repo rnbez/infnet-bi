@@ -20,9 +20,12 @@ class DM_FORNECEDOR(object):
     @classmethod
     def add(cls, fornecedor, cnpj_cpf):
         succ, id, formatted = cls.format(fornecedor, cnpj_cpf)
+        if not succ:
+            return None
         key = cnpj_cpf
-        if succ and key not in cls.values:
-            cls.values[key] = formatted
+        if key in cls.values:
+            return cls.values[key][0]
+        cls.values[key] = formatted
         return id
 
     @classmethod
