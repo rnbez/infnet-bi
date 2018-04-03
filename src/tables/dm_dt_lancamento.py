@@ -2,7 +2,7 @@ from tables.dump_file import dump_file
 
 
 class DM_DT_LANCAMENTO(object):
-    headers = ['ID',
+    headers = ['ID_DM_DT_LANCAMENTO',
                'ANO',
                'MES',
                'ANO_MES',

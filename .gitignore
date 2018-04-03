@@ -104,3 +104,4 @@ ENV/
 .vscode
 out/
 *.csv
+*.pbix

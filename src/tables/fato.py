@@ -2,15 +2,15 @@ from tables.dump_file import dump_file
 
 
 class FATO(object):
-    headers = ['ID',
+    headers = ['ID_FATO',
                'VALOR_REEMBOLSADO',
                'DOCUMENTO_DESPESA',
                'DETALHAMENTO_DESPESA',
-               'FK_DM_DT_LANCAMENTO',
-               'FK_DM_DT_CUSTO',
-               'FK_DM_SENADOR',
-               'FK_DM_FORNECEDOR',
-               'FK_DM_TIPO_DESP']
+               'ID_DM_DT_LANCAMENTO',
+               'ID_DM_DT_CUSTO',
+               'ID_DM_SENADOR',
+               'ID_DM_FORNECEDOR',
+               'ID_DM_TIPO_DESP']
     values = {}
     _empty_value = 'Não informado'
 

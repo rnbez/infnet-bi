@@ -2,7 +2,7 @@ from tables.dump_file import dump_file
 
 
 class DM_FORNECEDOR(object):
-    headers = ['ID',
+    headers = ['ID_DM_FORNECEDOR',
                'CNPJ_CPF_FORNECEDOR',
                'NOME_FORNECEDOR']
     values = {}
